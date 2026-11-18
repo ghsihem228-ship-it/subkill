@@ -20,12 +20,14 @@ export const metadata: Metadata = {
   keywords: ["SubKill", "subscription tracker", "cancel subscriptions", "recurring charges", "personal finance"],
   authors: [{ name: "SubKill" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
   },
   openGraph: {
     title: "SubKill — The Subscription Killer",
     description: "Detect every recurring charge. Score how hard it is to cancel. Finish the kill.",
-    url: "https://chat.z.ai",
+    url: "https://subkill-theta.vercel.app",
     siteName: "SubKill",
     type: "website",
   },
