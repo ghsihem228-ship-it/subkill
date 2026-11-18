@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SubKill</string>
+    <string name="title_activity_main">SubKill</string>
+    <string name="package_name">com.subkill.app</string>
+    <string name="custom_url_scheme">com.subkill.app</string>
+</resources>
