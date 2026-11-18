@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   keywords: ["SubKill", "subscription tracker", "cancel subscriptions", "recurring charges", "personal finance"],
   authors: [{ name: "SubKill" }],
   icons: {
-    icon: "/logo.svg",
-    shortcut: "/logo.svg",
-    apple: "/logo.svg",
+    icon: "/logo.svg?v=3",
+    shortcut: "/logo.svg?v=3",
+    apple: "/logo.svg?v=3",
   },
   openGraph: {
     title: "SubKill — The Subscription Killer",
