@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
-   "build": "prisma generate && prisma db push --accept-data-loss && next build",
+    "build": "prisma generate && prisma db push --accept-data-loss && next build",
     "start": "NODE_ENV=production node .next/standalone/server.js",
     "lint": "eslint .",
     "db:push": "prisma db push --accept-data-loss",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:reset": "prisma migrate reset",
-    "db:seed": "bun prisma/seed.ts"
+    "db:seed": "bun prisma/seed.ts",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@capacitor/android": "^8.6.2",
@@ -96,4 +97,3 @@
     "typescript": "^5"
   }
 }
-
