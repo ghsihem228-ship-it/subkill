@@ -1,0 +1,306 @@
+{
+  "common": {
+    "linkAccounts": "Link accounts",
+    "link": "Link",
+    "rescan": "Rescan",
+    "perMonth": "/mo",
+    "perYear": "/yr"
+  },
+  "header": {
+    "tagline": "The Subscription Killer",
+    "mainNav": "Main navigation",
+    "changeLanguage": "Change language",
+    "tabs": {
+      "dashboard": "Dashboard",
+      "subscriptions": "Subscriptions",
+      "cancelLab": "Cancel Lab",
+      "letters": "Letters",
+      "chat": "AI Strategist"
+    },
+    "scanFound": "{count, plural, =1 {Found {count} new recurring charge — {monthly}/mo added to your dashboard} other {Found {count} new recurring charges — {monthly}/mo added to your dashboard}}",
+    "scanNone": "Scan complete — no new recurring charges found",
+    "scanFailed": "Scan failed: {error}"
+  },
+  "footer": {
+    "disclaimer": "SubKill — educational demo, not legal advice.",
+    "simulated": "Detection is simulated",
+    "local": "Your data stays local"
+  },
+  "dashboard": {
+    "spendingAria": "Spending overview",
+    "savingsAria": "Savings overview",
+    "worstAria": "Worst offenders",
+    "monthlyBurn": "Monthly burn",
+    "monthlyBurnSub": "Recurring charges right now",
+    "annualized": "Annualized",
+    "annualizedSub": "What it costs you per year",
+    "activeSubs": "Active subscriptions",
+    "activeSubsSub": "{count} rated hard or worse",
+    "hardToKill": "Hard to kill",
+    "hardToKillSub": "Difficulty 6 or higher",
+    "youKilled": "You killed",
+    "youKilledSub": "{count} canceled — {annual}/yr back in your pocket",
+    "killPotential": "Kill potential",
+    "killPotentialSub": "{count, plural, =1 {Locked inside {count} hard-to-kill subscription} other {Locked inside {count} hard-to-kill subscriptions}}",
+    "chartTitle": "Monthly spend by category",
+    "chartEmpty": "No active subscriptions yet.",
+    "upcomingTitle": "Upcoming charges",
+    "upcomingEmpty": "Nothing scheduled.",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "inDays": "In {count} days",
+    "moreScheduled": "+{count} more scheduled",
+    "worstTitle": "Worst offenders",
+    "worstSub": "Hardest-to-kill active subscriptions",
+    "worstEmpty": "No active subscriptions left to kill. Good work.",
+    "killIt": "Kill it",
+    "otherCategory": "Other"
+  },
+  "subscriptions": {
+    "searchPlaceholder": "Search name, merchant, category...",
+    "searchAria": "Search subscriptions",
+    "statusFilterAria": "Filter by status",
+    "difficultyFilterAria": "Filter by difficulty",
+    "sourceFilterAria": "Filter by source",
+    "sortAria": "Sort subscriptions",
+    "status": {
+      "all": "All statuses",
+      "active": "Active",
+      "canceling": "Canceling",
+      "canceled": "Canceled"
+    },
+    "tier": {
+      "all": "All difficulty",
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard",
+      "nightmare": "Nightmare"
+    },
+    "source": {
+      "all": "All sources",
+      "bank": "Bank",
+      "email": "Email",
+      "appstore": "App Store"
+    },
+    "sort": {
+      "difficulty": "Sort: Difficulty",
+      "amount": "Sort: Monthly amount",
+      "nextCharge": "Sort: Next charge"
+    },
+    "listMeta": "{shown} of {total} {total, plural, =1 {subscription} other {subscriptions}}",
+    "emptyTitle": "No subscriptions detected yet",
+    "emptyDescription": "Link an account and run the detection scan to find your recurring charges.",
+    "noMatchTitle": "Nothing matches those filters",
+    "noMatchDescription": "Try clearing the search or switching a filter back to all."
+  },
+  "detail": {
+    "nextCharge": "Next charge {date}",
+    "killed": "Killed",
+    "savings": "{monthly}/mo back in your pocket",
+    "difficulty": "Difficulty",
+    "cancellationMethod": "Cancellation method:",
+    "startCancellation": "Start cancellation",
+    "continueLab": "Continue in Cancel Lab",
+    "transactionHistory": "Transaction history",
+    "charges": "{count, plural, =1 {{count} charge} other {{count} charges}}",
+    "noTransactions": "No transactions recorded for this subscription.",
+    "inProgress": "Cancellation in progress — step {current} of {total}"
+  },
+  "connect": {
+    "title": "Connect accounts",
+    "description": "Link a source below, then run the detection scan to find recurring charges.",
+    "resultsDescription": "Detection scan results",
+    "providers": {
+      "chase": {
+        "name": "Chase Checking",
+        "blurb": "6 months of card transactions analyzed for recurring merchants"
+      },
+      "gmail": {
+        "name": "Gmail",
+        "blurb": "Receipts, renewals and billing notices scanned for subscriptions"
+      },
+      "appstore": {
+        "name": "App Store",
+        "blurb": "Active in-app purchases and auto-renewing app subscriptions"
+      }
+    },
+    "pulled": "{count, plural, =1 {Pulled {count} transaction} other {Pulled {count} transactions}}",
+    "connected": "Connected",
+    "connecting": "Connecting",
+    "connect": "Connect",
+    "runScan": "Run detection scan",
+    "sourcesCount": "({count, plural, =1 {{count} source} other {{count} sources}})",
+    "connectHint": "Connect at least one source to enable the scan.",
+    "scanning": "Scanning for recurring charges...",
+    "scanningSub": "Analyzing transactions, receipts and renewals",
+    "found": "{count, plural, =1 {Found {count} recurring charge} other {Found {count} recurring charges}}",
+    "seenCount": "seen {count}x",
+    "noneFound": "No new recurring charges found",
+    "noneFoundSub": "Everything this scan can see is already on your dashboard.",
+    "addAll": "Add all to dashboard",
+    "backToSources": "Back to sources",
+    "toastConnected": "{name} connected — pulled {count, plural, =1 {{count} transaction} other {{count} transactions}}",
+    "toastConnectFailed": "Could not connect: {error}",
+    "toastScanFailed": "Scan failed: {error}",
+    "toastAdded": "{count, plural, =1 {{count} subscription added to your dashboard — {monthly}/mo} other {{count} subscriptions added to your dashboard — {monthly}/mo}}"
+  },
+  "cancelLab": {
+    "emptyTitle": "Nothing to kill yet",
+    "emptyDescription": "Link an account, run the detection scan, and your subscriptions will show up here with a guided kill plan.",
+    "targets": "Targets",
+    "total": "{count} total",
+    "minLeft": "~{count} min left",
+    "progressSteps": "STEP {current} / {total}",
+    "completeCount": "{count} complete",
+    "stepOf": "Step {current} of {total}",
+    "minEstimate": "~{count} min",
+    "minShort": "{count}m",
+    "current": "Current",
+    "stepTypes": {
+      "digital": "Digital",
+      "phone": "Phone",
+      "mail": "Mail",
+      "in_person": "In person"
+    },
+    "retentionHoop": "Retention hoop — script to repeat",
+    "markComplete": "Mark step complete",
+    "generateLetter": "Generate letter",
+    "allSteps": "All steps",
+    "metricDifficulty": "Difficulty",
+    "metricSteps": "Steps",
+    "metricHoops": "Hoop alerts",
+    "metricTime": "Est. time",
+    "difficultyOfTen": "{value}/10",
+    "estMinutes": "~{count}m",
+    "hoopWarning": "This merchant uses retention hoops. Expect counter-offers, \"freeze\" options and stall tactics — the wizard gives you exact scripts to shut each one down.",
+    "startCancellation": "Start cancellation",
+    "killedStamp": "Killed",
+    "isDead": "{name} is dead",
+    "monthlySavings": "+{monthly}/mo",
+    "annualBack": "{annual}/yr back in your pocket",
+    "completedOn": "completed {date}",
+    "workSummary": "{count} steps, ~{minutes} minutes of work",
+    "backToSubscriptions": "Back to subscriptions",
+    "moreActions": "More actions",
+    "startOver": "Start over (reactivate)",
+    "killRecord": "Kill record",
+    "toastKilled": "Killed {name} — saving {monthly}/mo",
+    "toastStarted": "Cancellation started for {name}",
+    "toastReset": "{name} reactivated — steps reset",
+    "toastFailed": "Action failed: {error}"
+  },
+  "letters": {
+    "generateTitle": "Generate a letter",
+    "noCancellable": "No cancellable subscriptions right now. Detect or reactivate a subscription first.",
+    "chooseSubscription": "Choose subscription",
+    "chooseTemplate": "Choose template",
+    "generate": "Generate letter",
+    "drafting": "Reaper is drafting your letter — this can take a few seconds.",
+    "untitled": "Untitled letter",
+    "copy": "Copy",
+    "download": "Download .txt",
+    "noEditorTitle": "No letter in the editor",
+    "noEditorDescription": "Pick a subscription and a template, then generate. Everything is editable before you copy or download it.",
+    "savedTitle": "Saved letters",
+    "savedEmpty": "No saved letters yet.",
+    "deleteAria": "Delete {title}",
+    "templates": {
+      "cancellation_demand": {
+        "label": "Cancellation demand",
+        "description": "Firm notice to cancel at the end of the billing period"
+      },
+      "certified_mail": {
+        "label": "Certified mail",
+        "description": "Proof-of-delivery backup cancellation"
+      },
+      "chargeback": {
+        "label": "Chargeback dispute",
+        "description": "Dispute notice to your card issuer"
+      },
+      "ag_complaint": {
+        "label": "AG complaint",
+        "description": "Consumer complaint to your state attorney general"
+      }
+    },
+    "toastGenerated": "Letter generated — edit it freely before sending",
+    "toastGenerateFailed": "Generation failed: {error}",
+    "toastDeleted": "Letter deleted",
+    "toastDeleteFailed": "Delete failed: {error}",
+    "toastCopied": "Letter copied to clipboard",
+    "toastClipboard": "Could not access the clipboard",
+    "toastDownloaded": "Letter downloaded as .txt"
+  },
+  "chat": {
+    "strategist": "AI cancellation strategist",
+    "online": "Online",
+    "clear": "Clear",
+    "placeholder": "Ask Reaper how to kill a charge...",
+    "messageAria": "Message Reaper",
+    "sendAria": "Send message",
+    "hint": "Enter to send · Shift+Enter for a new line",
+    "typing": "Reaper is typing",
+    "suggestions": {
+      "gym": "How do I cancel my gym without visiting in person?",
+      "rights": "What are my rights when a merchant keeps charging me?",
+      "letter": "Write me a certified mail letter for MegaSuite",
+      "hardest": "Which of my subscriptions are hardest to cancel?"
+    },
+    "toastReplyFailed": "Reaper could not reply: {error}",
+    "toastCleared": "Conversation cleared",
+    "toastClearFailed": "Could not clear: {error}"
+  },
+  "difficulty": {
+    "aria": "Difficulty {value} out of 10",
+    "tiers": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard",
+      "nightmare": "Nightmare"
+    },
+    "status": {
+      "active": "Active",
+      "canceling": "Canceling",
+      "canceled": "Canceled",
+      "undetected": "Undetected"
+    },
+    "sources": {
+      "bank": "Bank",
+      "email": "Email",
+      "appstore": "App Store"
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "buttonAria": "Notifications",
+    "markAllRead": "Mark all read",
+    "clear": "Clear",
+    "empty": "You’re all caught up",
+    "items": {
+      "detection": {
+        "title": "Scan complete",
+        "body": "{count, plural, =1 {Found {count} recurring charge — ${monthly}/mo} other {Found {count} recurring charges — ${monthly}/mo}}"
+      },
+      "cancellation_started": {
+        "title": "Cancellation started",
+        "body": "{name} is now in the Cancel Lab"
+      },
+      "cancellation_completed": {
+        "title": "Subscription killed",
+        "body": "{name} is dead — saving ${monthly}/mo (${annual}/yr)"
+      },
+      "letter_generated": {
+        "title": "Letter generated",
+        "body": "{title}"
+      },
+      "upcoming_charge": {
+        "title": "Upcoming charge",
+        "body": "{name} will charge ${amount} — {date}"
+      }
+    }
+  },
+  "welcome": {
+    "kicker": "The Subscription Killer",
+    "headline": "Kill your subscriptions before they kill your wallet",
+    "description": "Connect a bank, email, or app-store account. SubKill detects every recurring charge, scores how hard each one is to cancel, and walks you through the kill — retention hoops included."
+  }
+}

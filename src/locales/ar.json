@@ -1,0 +1,306 @@
+{
+  "common": {
+    "linkAccounts": "ربط الحسابات",
+    "link": "ربط",
+    "rescan": "إعادة الفحص",
+    "perMonth": "/شهر",
+    "perYear": "/سنويًا"
+  },
+  "header": {
+    "tagline": "قاتل الاشتراكات",
+    "mainNav": "التنقل الرئيسي",
+    "changeLanguage": "تغيير اللغة",
+    "tabs": {
+      "dashboard": "لوحة التحكم",
+      "subscriptions": "الاشتراكات",
+      "cancelLab": "مختبر الإلغاء",
+      "letters": "الرسائل",
+      "chat": "استراتيجي الذكاء الاصطناعي"
+    },
+    "scanFound": "تم العثور على {count} رسوم متكررة — تمت إضافة {monthly}/شهر إلى لوحة التحكم",
+    "scanNone": "اكتمل الفحص — لم يتم العثور على رسوم متكررة جديدة",
+    "scanFailed": "فشل الفحص: {error}"
+  },
+  "footer": {
+    "disclaimer": "SubKill — عرض تعليمي، وليس استشارة قانونية.",
+    "simulated": "الكشف محاكى",
+    "local": "تبقى بياناتك محليًا"
+  },
+  "dashboard": {
+    "spendingAria": "نظرة عامة على الإنفاق",
+    "savingsAria": "نظرة عامة على التوفير",
+    "worstAria": "الأكثر خطورة",
+    "monthlyBurn": "الإنفاق الشهري",
+    "monthlyBurnSub": "الرسوم المتكررة حاليًا",
+    "annualized": "التكلفة السنوية",
+    "annualizedSub": "ما يكلفك إياه سنويًا",
+    "activeSubs": "الاشتراكات النشطة",
+    "activeSubsSub": "تم تصنيف {count} كصعبة أو أسوأ",
+    "hardToKill": "صعبة الإلغاء",
+    "hardToKillSub": "صعوبة 6 أو أعلى",
+    "youKilled": "ما ألغيته",
+    "youKilledSub": "تم إلغاء {count} — {annual}/سنويًا عادت إلى جيبك",
+    "killPotential": "إمكانية التوفير",
+    "killPotentialSub": "محبوسة داخل {count} اشتراك صعب الإلغاء",
+    "chartTitle": "الإنفاق الشهري حسب الفئة",
+    "chartEmpty": "لا توجد اشتراكات نشطة بعد.",
+    "upcomingTitle": "الرسوم القادمة",
+    "upcomingEmpty": "لا شيء مجدول.",
+    "today": "اليوم",
+    "tomorrow": "غدًا",
+    "inDays": "خلال {count} أيام",
+    "moreScheduled": "+{count} أخرى مجدولة",
+    "worstTitle": "الأكثر خطورة",
+    "worstSub": "الاشتراكات النشطة الأصعب إلغاءً",
+    "worstEmpty": "لم يبقَ أي اشتراك نشط لإلغائه. عمل رائع.",
+    "killIt": "ألغِه",
+    "otherCategory": "أخرى"
+  },
+  "subscriptions": {
+    "searchPlaceholder": "ابحث بالاسم أو التاجر أو الفئة...",
+    "searchAria": "البحث في الاشتراكات",
+    "statusFilterAria": "تصفية حسب الحالة",
+    "difficultyFilterAria": "تصفية حسب الصعوبة",
+    "sourceFilterAria": "تصفية حسب المصدر",
+    "sortAria": "ترتيب الاشتراكات",
+    "status": {
+      "all": "جميع الحالات",
+      "active": "نشط",
+      "canceling": "قيد الإلغاء",
+      "canceled": "ملغى"
+    },
+    "tier": {
+      "all": "جميع الصعوبات",
+      "easy": "سهل",
+      "medium": "متوسط",
+      "hard": "صعب",
+      "nightmare": "كابوس"
+    },
+    "source": {
+      "all": "جميع المصادر",
+      "bank": "البنك",
+      "email": "البريد الإلكتروني",
+      "appstore": "متجر التطبيقات"
+    },
+    "sort": {
+      "difficulty": "ترتيب: الصعوبة",
+      "amount": "ترتيب: المبلغ الشهري",
+      "nextCharge": "ترتيب: الرسم القادم"
+    },
+    "listMeta": "{shown} من {total} اشتراك",
+    "emptyTitle": "لم يتم اكتشاف أي اشتراكات بعد",
+    "emptyDescription": "اربط حسابًا وشغّل فحص الكشف للعثور على رسومك المتكررة.",
+    "noMatchTitle": "لا نتائج مطابقة لهذه الفلاتر",
+    "noMatchDescription": "جرّب مسح البحث أو إعادة أحد الفلاتر إلى الكل."
+  },
+  "detail": {
+    "nextCharge": "الرسم القادم في {date}",
+    "killed": "تم الإلغاء",
+    "savings": "{monthly}/شهر تعود إلى جيبك",
+    "difficulty": "الصعوبة",
+    "cancellationMethod": "طريقة الإلغاء:",
+    "startCancellation": "بدء الإلغاء",
+    "continueLab": "المتابعة في مختبر الإلغاء",
+    "transactionHistory": "سجل المعاملات",
+    "charges": "{count} عملية تحصيل",
+    "noTransactions": "لا توجد معاملات مسجلة لهذا الاشتراك.",
+    "inProgress": "الإلغاء قيد التنفيذ — الخطوة {current} من {total}"
+  },
+  "connect": {
+    "title": "ربط الحسابات",
+    "description": "اربط مصدرًا أدناه، ثم شغّل فحص الكشف للعثور على الرسوم المتكررة.",
+    "resultsDescription": "نتائج فحص الكشف",
+    "providers": {
+      "chase": {
+        "name": "Chase Checking",
+        "blurb": "تحليل معاملات بطاقتك لآخر 6 أشهر للكشف عن التجار المتكررين"
+      },
+      "gmail": {
+        "name": "Gmail",
+        "blurb": "فحص الإيصالات والتجديدات وإشعارات الفوترة للعثور على الاشتراكات"
+      },
+      "appstore": {
+        "name": "App Store",
+        "blurb": "المشتريات داخل التطبيقات النشطة والاشتراكات المتجددة تلقائيًا"
+      }
+    },
+    "pulled": "تم جلب {count} معاملة",
+    "connected": "مربوط",
+    "connecting": "جارٍ الربط...",
+    "connect": "ربط",
+    "runScan": "تشغيل فحص الكشف",
+    "sourcesCount": "({count} مصدر)",
+    "connectHint": "اربط مصدرًا واحدًا على الأقل لتمكين الفحص.",
+    "scanning": "جارٍ البحث عن الرسوم المتكررة...",
+    "scanningSub": "تحليل المعاملات والإيصالات والتجديدات",
+    "found": "تم العثور على {count} رسوم متكررة",
+    "seenCount": "ظهرت {count} مرة",
+    "noneFound": "لم يتم العثور على رسوم متكررة جديدة",
+    "noneFoundSub": "كل ما يمكن لهذا الفحص رؤيته موجود بالفعل في لوحة التحكم.",
+    "addAll": "إضافة الكل إلى لوحة التحكم",
+    "backToSources": "العودة إلى المصادر",
+    "toastConnected": "تم ربط {name} — تم جلب {count} معاملة",
+    "toastConnectFailed": "تعذّر الربط: {error}",
+    "toastScanFailed": "فشل الفحص: {error}",
+    "toastAdded": "تمت إضافة {count} اشتراك إلى لوحة التحكم — {monthly}/شهر"
+  },
+  "cancelLab": {
+    "emptyTitle": "لا يوجد ما يُلغى بعد",
+    "emptyDescription": "اربط حسابًا وشغّل فحص الكشف، وستظهر اشتراكاتك هنا مع خطة إلغاء موجّهة.",
+    "targets": "الأهداف",
+    "total": "{count} إجمالًا",
+    "minLeft": "باقٍ ~{count} دقيقة",
+    "progressSteps": "الخطوة {current} / {total}",
+    "completeCount": "اكتملت {count}",
+    "stepOf": "الخطوة {current} من {total}",
+    "minEstimate": "~{count} دقيقة",
+    "minShort": "{count} د",
+    "current": "الحالية",
+    "stepTypes": {
+      "digital": "رقمي",
+      "phone": "هاتفي",
+      "mail": "بالبريد",
+      "in_person": "حضوريًا"
+    },
+    "retentionHoop": "عائق الاحتفاظ — نص متكرر",
+    "markComplete": "وضع علامة إكمال على الخطوة",
+    "generateLetter": "إنشاء رسالة",
+    "allSteps": "جميع الخطوات",
+    "metricDifficulty": "الصعوبة",
+    "metricSteps": "الخطوات",
+    "metricHoops": "تنبيهات العوائق",
+    "metricTime": "الوقت التقديري",
+    "difficultyOfTen": "{value}/10",
+    "estMinutes": "~{count} د",
+    "hoopWarning": "يستخدم هذا التاجر عوائق احتفاظ. توقّع عروضًا مضادة وخيارات «تجميد» وتكتيكات تسويف — يمنحك المعالج نصوصًا دقيقة لإسكات كل منها.",
+    "startCancellation": "بدء الإلغاء",
+    "killedStamp": "أُلغي",
+    "isDead": "تم القضاء على {name}",
+    "monthlySavings": "+{monthly}/شهر",
+    "annualBack": "{annual}/سنويًا عادت إلى جيبك",
+    "completedOn": "اكتمل في {date}",
+    "workSummary": "{count} خطوات، ~{minutes} دقيقة من العمل",
+    "backToSubscriptions": "العودة إلى الاشتراكات",
+    "moreActions": "مزيد من الإجراءات",
+    "startOver": "البدء من جديد (إعادة التنشيط)",
+    "killRecord": "سجل الإلغاء",
+    "toastKilled": "تم إلغاء {name} — توفير {monthly}/شهر",
+    "toastStarted": "بدأ إلغاء {name}",
+    "toastReset": "تمت إعادة تنشيط {name} — أُعيدت الخطوات",
+    "toastFailed": "فشل الإجراء: {error}"
+  },
+  "letters": {
+    "generateTitle": "إنشاء رسالة",
+    "noCancellable": "لا توجد اشتراكات قابلة للإلغاء الآن. اكتشف اشتراكًا أو أعد تنشيطه أولًا.",
+    "chooseSubscription": "اختر اشتراكًا",
+    "chooseTemplate": "اختر قالبًا",
+    "generate": "إنشاء الرسالة",
+    "drafting": "يعمل Reaper على صياغة رسالتك — قد يستغرق ذلك بضع ثوانٍ.",
+    "untitled": "رسالة بدون عنوان",
+    "copy": "نسخ",
+    "download": "تنزيل .txt",
+    "noEditorTitle": "لا توجد رسالة في المحرر",
+    "noEditorDescription": "اختر اشتراكًا وقالبًا ثم أنشئ الرسالة. كل شيء قابل للتعديل قبل النسخ أو التنزيل.",
+    "savedTitle": "الرسائل المحفوظة",
+    "savedEmpty": "لا توجد رسائل محفوظة بعد.",
+    "deleteAria": "حذف {title}",
+    "templates": {
+      "cancellation_demand": {
+        "label": "طلب إلغاء",
+        "description": "إشعار حازم بالإلغاء في نهاية دورة الفوترة"
+      },
+      "certified_mail": {
+        "label": "بريد مسجل",
+        "description": "إلغاء احتياطي مع إثبات التسليم"
+      },
+      "chargeback": {
+        "label": "نزاع استرداد",
+        "description": "إشعار نزاع يُرسل إلى مصدر بطاقتك"
+      },
+      "ag_complaint": {
+        "label": "شكوى للنائب العام",
+        "description": "شكوى مستهلك إلى النائب العام في ولايتك"
+      }
+    },
+    "toastGenerated": "تم إنشاء الرسالة — عدّلها بحرية قبل الإرسال",
+    "toastGenerateFailed": "فشل الإنشاء: {error}",
+    "toastDeleted": "تم حذف الرسالة",
+    "toastDeleteFailed": "فشل الحذف: {error}",
+    "toastCopied": "تم نسخ الرسالة إلى الحافظة",
+    "toastClipboard": "تعذّر الوصول إلى الحافظة",
+    "toastDownloaded": "تم تنزيل الرسالة بصيغة .txt"
+  },
+  "chat": {
+    "strategist": "استراتيجي إلغاء ذكي",
+    "online": "متصل",
+    "clear": "مسح",
+    "placeholder": "اسأل Reaper كيف تلغي أي رسم...",
+    "messageAria": "مراسلة Reaper",
+    "sendAria": "إرسال الرسالة",
+    "hint": "Enter للإرسال · Shift+Enter لسطر جديد",
+    "typing": "Reaper يكتب الآن",
+    "suggestions": {
+      "gym": "كيف ألغي اشتراك النادي الرياضي دون الحضور شخصيًا؟",
+      "rights": "ما حقوقي عندما يستمر التاجر في تحصيل الرسوم مني؟",
+      "letter": "اكتب لي رسالة بريد مسجل لإلغاء MegaSuite",
+      "hardest": "أي اشتراكاتي هي الأصعب في الإلغاء؟"
+    },
+    "toastReplyFailed": "تعذّر على Reaper الرد: {error}",
+    "toastCleared": "تم مسح المحادثة",
+    "toastClearFailed": "تعذّر المسح: {error}"
+  },
+  "difficulty": {
+    "aria": "الصعوبة {value} من 10",
+    "tiers": {
+      "easy": "سهل",
+      "medium": "متوسط",
+      "hard": "صعب",
+      "nightmare": "كابوس"
+    },
+    "status": {
+      "active": "نشط",
+      "canceling": "قيد الإلغاء",
+      "canceled": "ملغى",
+      "undetected": "غير مكتشف"
+    },
+    "sources": {
+      "bank": "البنك",
+      "email": "البريد الإلكتروني",
+      "appstore": "متجر التطبيقات"
+    }
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "buttonAria": "الإشعارات",
+    "markAllRead": "وضع علامة مقروء على الكل",
+    "clear": "مسح",
+    "empty": "أنت على اطلاع تام",
+    "items": {
+      "detection": {
+        "title": "اكتمل الفحص",
+        "body": "تم العثور على {count} رسوم متكررة — ${monthly}/شهر"
+      },
+      "cancellation_started": {
+        "title": "بدأ الإلغاء",
+        "body": "أصبح {name} الآن في مختبر الإلغاء"
+      },
+      "cancellation_completed": {
+        "title": "تم إلغاء الاشتراك",
+        "body": "تم القضاء على {name} — توفير ${monthly}/شهر (${annual}/سنويًا)"
+      },
+      "letter_generated": {
+        "title": "تم إنشاء رسالة",
+        "body": "{title}"
+      },
+      "upcoming_charge": {
+        "title": "رسم قادم",
+        "body": "سيحصّل {name} مبلغ ${amount} — {date}"
+      }
+    }
+  },
+  "welcome": {
+    "kicker": "قاتل الاشتراكات",
+    "headline": "ألغِ اشتراكاتك قبل أن تلغي محفظتك",
+    "description": "اربط حسابًا بنكيًا أو بريدًا إلكترونيًا أو حساب متجر تطبيقات. يكتشف SubKill كل رسم متكرر، ويقيّم صعوبة إلغاء كل منها، ويرشدك خلال العملية — بكل عوائق الاحتفاظ."
+  }
+}

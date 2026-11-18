@@ -1,0 +1,306 @@
+{
+  "common": {
+    "linkAccounts": "Connecter des comptes",
+    "link": "Connecter",
+    "rescan": "Rescanner",
+    "perMonth": "/mois",
+    "perYear": "/an"
+  },
+  "header": {
+    "tagline": "Le tueur d’abonnements",
+    "mainNav": "Navigation principale",
+    "changeLanguage": "Changer de langue",
+    "tabs": {
+      "dashboard": "Tableau de bord",
+      "subscriptions": "Abonnements",
+      "cancelLab": "Laboratoire d’annulation",
+      "letters": "Lettres",
+      "chat": "Stratège IA"
+    },
+    "scanFound": "{count, plural, =1 {{count} nouvelle charge récurrente détectée — {monthly}/mois ajoutés à votre tableau de bord} other {{count} nouvelles charges récurrentes détectées — {monthly}/mois ajoutés à votre tableau de bord}}",
+    "scanNone": "Analyse terminée — aucune nouvelle charge récurrente détectée",
+    "scanFailed": "Échec de l’analyse : {error}"
+  },
+  "footer": {
+    "disclaimer": "SubKill — démonstration éducative, ne constitue pas un conseil juridique.",
+    "simulated": "La détection est simulée",
+    "local": "Vos données restent locales"
+  },
+  "dashboard": {
+    "spendingAria": "Vue des dépenses",
+    "savingsAria": "Vue des économies",
+    "worstAria": "Pires cibles",
+    "monthlyBurn": "Dépense mensuelle",
+    "monthlyBurnSub": "Charges récurrentes actuelles",
+    "annualized": "Coût annualisé",
+    "annualizedSub": "Ce que cela vous coûte par an",
+    "activeSubs": "Abonnements actifs",
+    "activeSubsSub": "{count} jugés difficiles ou pire",
+    "hardToKill": "Difficiles à tuer",
+    "hardToKillSub": "Difficulté 6 ou plus",
+    "youKilled": "Vous avez tué",
+    "youKilledSub": "{count} résiliés — {annual}/an de retour dans votre poche",
+    "killPotential": "Potentiel d’économies",
+    "killPotentialSub": "{count, plural, =1 {Bloqué dans {count} abonnement difficile à résilier} other {Bloqué dans {count} abonnements difficiles à résilier}}",
+    "chartTitle": "Dépense mensuelle par catégorie",
+    "chartEmpty": "Aucun abonnement actif pour le moment.",
+    "upcomingTitle": "Charges à venir",
+    "upcomingEmpty": "Rien de prévu.",
+    "today": "Aujourd’hui",
+    "tomorrow": "Demain",
+    "inDays": "Dans {count} jours",
+    "moreScheduled": "+{count} autres prévues",
+    "worstTitle": "Pires cibles",
+    "worstSub": "Abonnements actifs les plus difficiles à résilier",
+    "worstEmpty": "Aucun abonnement actif à tuer. Beau travail.",
+    "killIt": "Le tuer",
+    "otherCategory": "Autre"
+  },
+  "subscriptions": {
+    "searchPlaceholder": "Rechercher un nom, un marchand, une catégorie...",
+    "searchAria": "Rechercher des abonnements",
+    "statusFilterAria": "Filtrer par statut",
+    "difficultyFilterAria": "Filtrer par difficulté",
+    "sourceFilterAria": "Filtrer par source",
+    "sortAria": "Trier les abonnements",
+    "status": {
+      "all": "Tous les statuts",
+      "active": "Actif",
+      "canceling": "En cours d’annulation",
+      "canceled": "Résilié"
+    },
+    "tier": {
+      "all": "Toutes les difficultés",
+      "easy": "Facile",
+      "medium": "Moyen",
+      "hard": "Difficile",
+      "nightmare": "Cauchemar"
+    },
+    "source": {
+      "all": "Toutes les sources",
+      "bank": "Banque",
+      "email": "E-mail",
+      "appstore": "App Store"
+    },
+    "sort": {
+      "difficulty": "Trier : Difficulté",
+      "amount": "Trier : Montant mensuel",
+      "nextCharge": "Trier : Prochaine charge"
+    },
+    "listMeta": "{shown} sur {total} {total, plural, =1 {abonnement} other {abonnements}}",
+    "emptyTitle": "Aucun abonnement détecté pour le moment",
+    "emptyDescription": "Connectez un compte et lancez l’analyse de détection pour trouver vos charges récurrentes.",
+    "noMatchTitle": "Aucun résultat pour ces filtres",
+    "noMatchDescription": "Essayez d’effacer la recherche ou de réinitialiser un filtre."
+  },
+  "detail": {
+    "nextCharge": "Prochaine charge le {date}",
+    "killed": "Éliminé",
+    "savings": "{monthly}/mois de retour dans votre poche",
+    "difficulty": "Difficulté",
+    "cancellationMethod": "Méthode d’annulation :",
+    "startCancellation": "Lancer l’annulation",
+    "continueLab": "Continuer dans le laboratoire",
+    "transactionHistory": "Historique des transactions",
+    "charges": "{count, plural, =1 {{count} prélèvement} other {{count} prélèvements}}",
+    "noTransactions": "Aucune transaction enregistrée pour cet abonnement.",
+    "inProgress": "Annulation en cours — étape {current} sur {total}"
+  },
+  "connect": {
+    "title": "Connecter des comptes",
+    "description": "Connectez une source ci-dessous, puis lancez l’analyse de détection pour trouver les charges récurrentes.",
+    "resultsDescription": "Résultats de l’analyse de détection",
+    "providers": {
+      "chase": {
+        "name": "Chase Checking",
+        "blurb": "6 mois de transactions par carte analysés pour détecter les marchands récurrents"
+      },
+      "gmail": {
+        "name": "Gmail",
+        "blurb": "Reçus, renouvellements et avis de facturation analysés pour repérer les abonnements"
+      },
+      "appstore": {
+        "name": "App Store",
+        "blurb": "Achats intégrés actifs et abonnements d’applications à renouvellement automatique"
+      }
+    },
+    "pulled": "{count, plural, =1 {{count} transaction récupérée} other {{count} transactions récupérées}}",
+    "connected": "Connecté",
+    "connecting": "Connexion...",
+    "connect": "Connecter",
+    "runScan": "Lancer l’analyse de détection",
+    "sourcesCount": "({count, plural, =1 {{count} source} other {{count} sources}})",
+    "connectHint": "Connectez au moins une source pour activer l’analyse.",
+    "scanning": "Analyse des charges récurrentes...",
+    "scanningSub": "Analyse des transactions, reçus et renouvellements",
+    "found": "{count, plural, =1 {{count} charge récurrente détectée} other {{count} charges récurrentes détectées}}",
+    "seenCount": "vu {count}x",
+    "noneFound": "Aucune nouvelle charge récurrente détectée",
+    "noneFoundSub": "Tout ce que cette analyse peut voir figure déjà sur votre tableau de bord.",
+    "addAll": "Tout ajouter au tableau de bord",
+    "backToSources": "Retour aux sources",
+    "toastConnected": "{name} connecté — {count, plural, =1 {{count} transaction récupérée} other {{count} transactions récupérées}}",
+    "toastConnectFailed": "Connexion impossible : {error}",
+    "toastScanFailed": "Échec de l’analyse : {error}",
+    "toastAdded": "{count, plural, =1 {{count} abonnement ajouté à votre tableau de bord — {monthly}/mois} other {{count} abonnements ajoutés à votre tableau de bord — {monthly}/mois}}"
+  },
+  "cancelLab": {
+    "emptyTitle": "Rien à tuer pour le moment",
+    "emptyDescription": "Connectez un compte, lancez l’analyse de détection, et vos abonnements apparaîtront ici avec un plan d’annulation guidé.",
+    "targets": "Cibles",
+    "total": "{count} au total",
+    "minLeft": "~{count} min restantes",
+    "progressSteps": "ÉTAPE {current} / {total}",
+    "completeCount": "{count, plural, one {# terminée} other {# terminées}}",
+    "stepOf": "Étape {current} sur {total}",
+    "minEstimate": "~{count} min",
+    "minShort": "{count} min",
+    "current": "En cours",
+    "stepTypes": {
+      "digital": "Numérique",
+      "phone": "Téléphone",
+      "mail": "Courrier",
+      "in_person": "En personne"
+    },
+    "retentionHoop": "Obstacle de rétention — script à répéter",
+    "markComplete": "Marquer l’étape comme terminée",
+    "generateLetter": "Générer une lettre",
+    "allSteps": "Toutes les étapes",
+    "metricDifficulty": "Difficulté",
+    "metricSteps": "Étapes",
+    "metricHoops": "Alertes rétention",
+    "metricTime": "Temps est.",
+    "difficultyOfTen": "{value}/10",
+    "estMinutes": "~{count} min",
+    "hoopWarning": "Ce marchand utilise des obstacles de rétention. Attendez-vous à des contre-offres, des options de « gel » et des tactiques de temporisation — l’assistant vous fournit les scripts exacts pour les neutraliser.",
+    "startCancellation": "Lancer l’annulation",
+    "killedStamp": "Éliminé",
+    "isDead": "{name} est mort",
+    "monthlySavings": "+{monthly}/mois",
+    "annualBack": "{annual}/an de retour dans votre poche",
+    "completedOn": "terminé le {date}",
+    "workSummary": "{count} étapes, ~{minutes} minutes de travail",
+    "backToSubscriptions": "Retour aux abonnements",
+    "moreActions": "Plus d’actions",
+    "startOver": "Recommencer (réactiver)",
+    "killRecord": "Dossier d’élimination",
+    "toastKilled": "{name} éliminé — {monthly}/mois d’économies",
+    "toastStarted": "Annulation lancée pour {name}",
+    "toastReset": "{name} réactivé — étapes réinitialisées",
+    "toastFailed": "Échec de l’action : {error}"
+  },
+  "letters": {
+    "generateTitle": "Générer une lettre",
+    "noCancellable": "Aucun abonnement résiliable pour le moment. Détectez ou réactivez d’abord un abonnement.",
+    "chooseSubscription": "Choisir un abonnement",
+    "chooseTemplate": "Choisir un modèle",
+    "generate": "Générer la lettre",
+    "drafting": "Reaper rédige votre lettre — cela peut prendre quelques secondes.",
+    "untitled": "Lettre sans titre",
+    "copy": "Copier",
+    "download": "Télécharger .txt",
+    "noEditorTitle": "Aucune lettre dans l’éditeur",
+    "noEditorDescription": "Choisissez un abonnement et un modèle, puis générez. Tout est modifiable avant copie ou téléchargement.",
+    "savedTitle": "Lettres enregistrées",
+    "savedEmpty": "Aucune lettre enregistrée pour le moment.",
+    "deleteAria": "Supprimer {title}",
+    "templates": {
+      "cancellation_demand": {
+        "label": "Demande d’annulation",
+        "description": "Avis ferme d’annulation à la fin de la période de facturation"
+      },
+      "certified_mail": {
+        "label": "Courrier recommandé",
+        "description": "Annulation de secours avec preuve de remise"
+      },
+      "chargeback": {
+        "label": "Contestation de débit",
+        "description": "Avis de contestation adressé à votre émetteur de carte"
+      },
+      "ag_complaint": {
+        "label": "Plainte au procureur général",
+        "description": "Plainte de consommateur auprès du procureur général de votre État"
+      }
+    },
+    "toastGenerated": "Lettre générée — modifiez-la librement avant l’envoi",
+    "toastGenerateFailed": "Échec de la génération : {error}",
+    "toastDeleted": "Lettre supprimée",
+    "toastDeleteFailed": "Échec de la suppression : {error}",
+    "toastCopied": "Lettre copiée dans le presse-papiers",
+    "toastClipboard": "Impossible d’accéder au presse-papiers",
+    "toastDownloaded": "Lettre téléchargée en .txt"
+  },
+  "chat": {
+    "strategist": "Stratège d’annulation IA",
+    "online": "En ligne",
+    "clear": "Effacer",
+    "placeholder": "Demandez à Reaper comment tuer une charge...",
+    "messageAria": "Écrire à Reaper",
+    "sendAria": "Envoyer le message",
+    "hint": "Entrée pour envoyer · Maj+Entrée pour une nouvelle ligne",
+    "typing": "Reaper est en train d’écrire",
+    "suggestions": {
+      "gym": "Comment résilier mon abonnement de salle de sport sans me déplacer ?",
+      "rights": "Quels sont mes droits quand un marchand continue de me prélever ?",
+      "letter": "Rédigez-moi un courrier recommandé pour MegaSuite",
+      "hardest": "Quels sont mes abonnements les plus difficiles à résilier ?"
+    },
+    "toastReplyFailed": "Reaper n’a pas pu répondre : {error}",
+    "toastCleared": "Conversation effacée",
+    "toastClearFailed": "Impossible d’effacer : {error}"
+  },
+  "difficulty": {
+    "aria": "Difficulté {value} sur 10",
+    "tiers": {
+      "easy": "Facile",
+      "medium": "Moyen",
+      "hard": "Difficile",
+      "nightmare": "Cauchemar"
+    },
+    "status": {
+      "active": "Actif",
+      "canceling": "En cours d’annulation",
+      "canceled": "Résilié",
+      "undetected": "Non détecté"
+    },
+    "sources": {
+      "bank": "Banque",
+      "email": "E-mail",
+      "appstore": "App Store"
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "buttonAria": "Notifications",
+    "markAllRead": "Tout marquer comme lu",
+    "clear": "Effacer",
+    "empty": "Vous êtes à jour",
+    "items": {
+      "detection": {
+        "title": "Analyse terminée",
+        "body": "{count, plural, =1 {{count} charge récurrente détectée — ${monthly}/mois} other {{count} charges récurrentes détectées — ${monthly}/mois}}"
+      },
+      "cancellation_started": {
+        "title": "Annulation lancée",
+        "body": "{name} est maintenant dans le laboratoire d’annulation"
+      },
+      "cancellation_completed": {
+        "title": "Abonnement éliminé",
+        "body": "{name} est mort — ${monthly}/mois d’économies (${annual}/an)"
+      },
+      "letter_generated": {
+        "title": "Lettre générée",
+        "body": "{title}"
+      },
+      "upcoming_charge": {
+        "title": "Charge à venir",
+        "body": "{name} va prélever ${amount} — {date}"
+      }
+    }
+  },
+  "welcome": {
+    "kicker": "Le tueur d’abonnements",
+    "headline": "Tuez vos abonnements avant qu’ils ne tuent votre portefeuille",
+    "description": "Connectez un compte bancaire, e-mail ou App Store. SubKill détecte chaque charge récurrente, évalue la difficulté de résiliation de chacune et vous guide pas à pas — obstacles de rétention compris."
+  }
+}

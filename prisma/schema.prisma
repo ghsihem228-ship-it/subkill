@@ -1,0 +1,106 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id           String        @id @default(cuid())
+  provider     String        @unique // 'chase' | 'gmail' | 'appstore'
+  name         String
+  type         String // 'bank' | 'email' | 'appstore'
+  status       String        @default("connected")
+  maskedRef    String
+  connectedAt  DateTime      @default(now())
+  transactions Transaction[]
+}
+
+model Transaction {
+  id             String        @id @default(cuid())
+  accountId      String
+  account        Account       @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  merchant       String
+  merchantKey    String // normalized key, matches subscription slug
+  amount         Float
+  date           DateTime
+  description    String
+  subscriptionId String?
+  subscription   Subscription? @relation(fields: [subscriptionId], references: [id], onDelete: SetNull)
+}
+
+model Subscription {
+  id                 String         @id @default(cuid())
+  slug               String         @unique
+  name               String
+  merchant           String
+  amount             Float
+  cadence            String // 'monthly' | 'yearly'
+  category           String
+  icon               String // lucide icon name
+  difficulty         Int
+  difficultyReason   String
+  status             String         @default("undetected") // undetected | active | canceling | canceled
+  detectedVia        String // 'bank' | 'email' | 'appstore'
+  nextCharge         DateTime
+  firstSeen          DateTime       @default(now())
+  notes              String
+  cancellationMethod String
+  steps              CancelStep[]
+  letters            Letter[]
+  cancellation       Cancellation?
+  transactions       Transaction[]
+}
+
+model CancelStep {
+  id               String       @id @default(cuid())
+  subscriptionId   String
+  subscription     Subscription @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
+  order            Int
+  title            String
+  description      String
+  type             String // 'digital' | 'phone' | 'mail' | 'in_person'
+  hoop             Boolean      @default(false)
+  hoopScript       String?
+  estimatedMinutes Int
+  done             Boolean      @default(false)
+}
+
+model Cancellation {
+  id             String       @id @default(cuid())
+  subscriptionId String       @unique
+  subscription   Subscription @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
+  status         String       @default("in_progress") // in_progress | done
+  currentStep    Int          @default(1)
+  startedAt      DateTime     @default(now())
+  completedAt    DateTime?
+}
+
+model Letter {
+  id             String       @id @default(cuid())
+  subscriptionId String
+  subscription   Subscription @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
+  templateType   String // 'cancellation_demand' | 'certified_mail' | 'chargeback' | 'ag_complaint'
+  title          String
+  content        String
+  createdAt      DateTime     @default(now())
+}
+
+model ChatMessage {
+  id        String   @id @default(cuid())
+  role      String // 'user' | 'assistant'
+  content   String
+  createdAt DateTime @default(now())
+}
+
+model Notification {
+  id             String   @id @default(cuid())
+  type           String
+  key            String   @unique
+  subscriptionId String?
+  params         String   @default("{}")
+  read           Boolean  @default(false)
+  createdAt      DateTime @default(now())
+}
