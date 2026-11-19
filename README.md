@@ -1,55 +1,88 @@
 # SubKill — The Subscription Killer
 
-SubKill links bank/email/app-store accounts, detects every recurring charge, scores how hard each one is to cancel, and finishes the kill through guided step-by-step workflows, AI-generated letters, and an AI cancellation strategist chat ("Reaper").
+[![Live Web App](https://img.shields.io/badge/Web_App-Live_on_Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://subkill-theta.vercel.app)
+[![Download Android APK](https://img.shields.io/badge/Android-Download_APK_(v1.0.0)-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/ghsihem228-ship-it/subkill/releases/latest)
 
-## Tech stack
+**SubKill** links bank, email, and app-store accounts (`Chase Checking`, `Gmail`, `App Store`), detects every recurring charge, scores how hard each one is to cancel, and finishes the kill through guided step-by-step workflows, AI-generated demand letters, and an AI cancellation strategist chat (**"Reaper"**).
 
-- Next.js 16 (App Router) + TypeScript 5
-- Tailwind CSS 4 + shadcn/ui (New York) + Lucide icons
-- Prisma ORM + SQLite (`db/custom.db` — included, with demo data)
-- Zustand (client state) + TanStack Query (server state) + next-intl (EN/FR/AR with RTL)
-- AI chat/letters: `z-ai-web-dev-sdk` (has graceful fallback replies if unavailable)
+---
 
-## Run it (VS Code)
+## Live Demo & Android Download
 
-Prerequisites: [Bun](https://bun.sh) (`curl -fsSL https://bun.sh/install | bash`) — or Node 20+ with npm (swap `bun` for `npm` / `npx` below).
+- **Web Application:** [Launch SubKill on Vercel](https://subkill-theta.vercel.app)
+- **Android App (`v1.0.0`):** [Download `app-release.apk`](https://github.com/ghsihem228-ship-it/subkill/releases/latest) *(Open **Releases → Assets** and install on your Android device)*
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router) + TypeScript 5
+- **UI & Styling:** Tailwind CSS 4 + shadcn/ui (New York) + Lucide icons
+- **Database & ORM:** Prisma ORM + PostgreSQL (Neon)
+- **State & i18n:** Zustand (client state) + TanStack Query (server state) + `next-intl` (EN / FR / AR with full RTL support)
+- **Mobile Runtime:** Capacitor (Native Android Wrapper)
+- **AI Engine:** `z-ai-web-dev-sdk` for Reaper chat and cancellation letters (with graceful authored fallback responses when offline/outside sandbox)
+
+---
+
+## Run Locally (VS Code)
+
+Prerequisites: Node.js 20+ (with `npm`) or [Bun](https://bun.sh).
 
 ```bash
-bun install          # install dependencies
-bun run db:generate  # generate the Prisma client (db/custom.db already has data)
-bun run dev          # start on http://localhost:3000
+# 1. Clone the repository
+git clone [https://github.com/ghsihem228-ship-it/subkill.git](https://github.com/ghsihem228-ship-it/subkill.git)
+cd subkill
+
+# 2. Install dependencies
+npm install
+
+# 3. Configure environment variables
+# Create a .env file in the root directory and set your PostgreSQL connection string:
+# DATABASE_URL="postgresql://USER:PASSWORD@HOST/DATABASE?sslmode=require"
+
+# 4. Generate Prisma client & sync schema
+npx prisma generate
+npx prisma db push
+
+# 5. Start the development server on http://localhost:3000
+npm run dev
 ```
 
-Optional:
+Optional scripts:
 
 ```bash
-bun run db:push      # re-create/reset the SQLite schema (accepts data loss)
-bun run db:seed      # re-seed demo data
-bun run lint         # ESLint
+npm run lint     # Run ESLint
+npm run build    # Generate Prisma client, push schema, and build for production
 ```
 
-The database path is portable: `.env` uses `DATABASE_URL="file:../db/custom.db"`, resolved relative to `prisma/schema.prisma`, so the project runs from any folder.
+---
 
-## Project map
+## Project Map
 
+```text
+prisma/schema.prisma       Data models (Account, Transaction, Subscription, CancelStep, Cancellation, Letter, Notification)
+src/app/                   Routes — page.tsx (main app), layout.tsx (metadata), api/* (REST endpoints)
+src/components/subtract/   App UI (header, dashboard, subscriptions, cancel lab, letters, Reaper chat)
+src/locales/               en.json / fr.json / ar.json translations (with RTL layout support)
+src/lib/                   Catalog (subscription data + cancel workflows), Zustand store, API client, i18n
+android/                   Native Android Studio / Capacitor project
+capacitor.config.ts        Capacitor configuration pointing to the live deployment
+agent-ctx/                 Design specs (SPEC.md)
 ```
-prisma/schema.prisma   Data models (Account, Transaction, Subscription, CancelStep, Cancellation, Letter, Notification)
-db/custom.db           SQLite database (demo data included)
-src/app/               Routes — page.tsx (the app), layout.tsx (metadata), api/* (REST endpoints)
-src/components/subtract/  App UI (header, dashboard, subscriptions, cancel lab, letters, chat)
-src/locales/           en.json / fr.json / ar.json translations
-src/lib/               catalog (subscription data + cancel workflows), store, api client, i18n
-agent-ctx/             Design specs (SPEC.md) — the shared build contract
-```
 
-## Android Studio notes
+---
 
-This is a Next.js web application, not a native Android project — Android Studio has no Gradle project to build here. Typical setups:
+## Android Build & Release
 
-- Open this folder in VS Code for development; use Android Studio only if you wrap the app later.
-- To ship it to Android, wrap the deployed site as a **Trusted Web Activity (TWA)** in a small Gradle shell project, or use **Capacitor** (`npx cap add android`) pointing at the served URL.
-- The UI is fully responsive (mobile-first, RTL-safe) and already works in Android WebView/TWA as-is.
+The web app is wrapped as a native Android application via **Capacitor** inside the `android/` directory:
 
-## AI chat caveat
+1. Open the `android/` folder in **Android Studio**.
+2. To build an unsigned test APK: **`Build` → `Build Bundle(s) / APK(s)` → `Build APK(s)`**.
+3. To build a signed release APK/AAB for distribution or Google Play: **`Build` → `Generate Signed App Bundle or APK...`** using your `.jks` keystore file.
 
-`/api/chat` and `/api/letters` call `z-ai-web-dev-sdk`. Outside the sandbox where that SDK is unavailable, both routes return authored fallback content instead of failing — every other feature is fully local.
+---
+
+## AI Chat & Letters Note
+
+`/api/chat` and `/api/letters` integrate `z-ai-web-dev-sdk`. In environments where the SDK credentials are not configured, both endpoints seamlessly fall back to pre-authored cancellation strategies and formal letter templates so all workflows remain functional.
